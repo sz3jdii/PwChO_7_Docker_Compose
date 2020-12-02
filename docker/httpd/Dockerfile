@@ -1,8 +1,7 @@
-FROM httpd:latest
+FROM httpd:2.4
 
 COPY httpd-vhosts.conf /usr/local/apache2/conf/extra/httpd-vhosts.conf
 COPY httpd.conf /usr/local/apache2/conf/httpd.conf
-COPY ./data/ /usr/local/apache2/htdocs
  
 RUN chgrp -R www-data /usr/local/apache2/conf/httpd.conf \
  && chgrp -R www-data /usr/local/apache2/conf/extra/httpd-vhosts.conf
