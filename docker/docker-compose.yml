@@ -1,0 +1,23 @@
+version: '3'
+networks:
+    backend:
+    frontend:
+services:
+    web:
+        container_name: web
+        build:
+            context: ./httpd
+        ports:
+            - 8877:80
+        networks:
+            - frontend
+            - backend
+    php:
+        container_name: php
+        build:
+            context: ./php
+        working_dir: /srv/app
+        networks: 
+            - backend
+        sysctls:
+            net.ipv6.conf.all.disable_ipv6: 1
