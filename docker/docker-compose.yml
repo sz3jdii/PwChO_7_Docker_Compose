@@ -28,7 +28,7 @@ services:
         environment:
             - MYSQL_ROOT_PASSWORD=toor    
         volumes:
-            - ./database:/var/log/mysql
+            - ./database:/var/lib/mysql
         networks:
             - backend
         
