@@ -1,5 +1,5 @@
 **Adam Świątkowski**
-
+** UŻYWAM PORTU 8877, GDYŻ PORT 6666 JEST PORTEM ZASTRZEŻONYM PRZEZ SYSTEM!!! **
 Projekt sklada sie z jednego pliku docker-compose.yml i 3 dockerfile'i
 
 Apache2
