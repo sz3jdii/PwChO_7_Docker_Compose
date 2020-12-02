@@ -25,14 +25,10 @@ services:
         container_name: db
         build:
             context: ./mysql
-            
-        volumes:
-            - ../logs/mysql:${MYSQL_LOG_DIR}
-            - ../database:/var/log/mysql
-        networks:
-            public_net:
-                ipv4_address: ${MYSQL_IP}
         environment:
-            - MYSQL_CONTAINER_USER=${MYSQL_CONTAINER_USER}
-            - MYSQL_CONTAINER_GROUP=${MYSQL_CONTAINER_GROUP}
-            - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=toor    
+        volumes:
+            - ./database:/var/log/mysql
+        networks:
+            - backend
+        
